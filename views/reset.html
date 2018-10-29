@@ -1,0 +1,21 @@
+<% include ./partials/header.html %>
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Reset</div>
+            <div class="card-body">
+                <form action="/reset" method="POST">
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input class="form-control" id="username" name="username" type="text" placeholder="Enter email">
+                    </div>                    
+                    <%- csrf_html %>
+                    <button type="submit" class="btn btn-primary btn-block">Reset</button>
+                </form>
+                <div class="text-center">
+                    <a class="d-block small mt-3" href="/reset">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>        
+    <% include ./partials/footer.html %>
